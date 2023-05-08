@@ -1,6 +1,10 @@
 # spatial paramid pooling
 
 空间金字塔汇集法
+参考资料
+- 解读SPPNet https://zhuanlan.zhihu.com/p/545339758
+
+
 
 Atrous Spatial Pyramid Pooling
 
@@ -19,3 +23,35 @@ n 为输出的特征图尺寸，ceiling指向上取整，floor指向下取整.
 SPPNet会将image输入resize成方形. 边长为image宽高的最小值. 即S = min(H, W).
 ## 为什么能解决这个问题
 
+## 简单代码
+```python
+import math
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+class SPP(nn.Module):
+    def __init__(self, output_size: list):
+        super().__init__()
+        self.output_size = output_size
+        
+    def forward(self, x):
+        b, _, h, w = x.shape
+        outputs = [F.max_pool2d(x, kernel_size=(math.ceil(h/self.output_size[i]), math.ceil(w/self.output_size[i])), 
+                                stride=(math.floor(h/self.output_size[i]), math.floor(w/self.output_size[i]))).view(b, -1)
+                   for i in range(len(self.output_size))]
+        print([f'branch{i} output shape: {x.shape}' for i, x in enumerate(outputs)])
+        return torch.cat(outputs, dim=1)
+   
+   
+inputs = torch.randn(4, 256, 10, 20)
+print('--- classification config ---')
+spp = SPP(output_size=[4, 2, 1])
+outputs = spp(inputs)
+print(outputs.shape, '\n')
+print('--- object detection config ---')
+spp = SPP(output_size=[6, 3, 2, 1])
+outputs = spp(inputs)
+print(outputs.shape)
+```
