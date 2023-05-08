@@ -9,6 +9,6 @@ non-local, 比如全连接。但是参数量太大。
 
 
 ## 具体方法
-![non local block]()
+![non local block](https://github.com/RessCris2/cv_info/blob/main/imgs/non_local_block_1.png)
 
 ## 为什么可以解决这个问题？

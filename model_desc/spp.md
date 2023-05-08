@@ -21,6 +21,7 @@ $$ k = celing(\frac{a}{n}), s = floor(\frac{a}{n})$$
 ，其中
 n 为输出的特征图尺寸，ceiling指向上取整，floor指向下取整.
 SPPNet会将image输入resize成方形. 边长为image宽高的最小值. 即S = min(H, W).
+![spp_1](https://github.com/RessCris2/cv_info/blob/main/imgs/spp_1.jpg)
 ## 为什么能解决这个问题
 
 ## 简单代码
