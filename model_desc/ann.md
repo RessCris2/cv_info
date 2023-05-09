@@ -14,7 +14,7 @@ fuse the features of different levels under a sufficient consideration of long r
 
 256x128 input, APNB is around 6 times faster than a non-local block on GPU while 28 times smaller in GPU running memory occupation
 
-![ann_1](https://github.com/RessCris2/cv_info/blob/main/imgs/ann_1.jpg)
+![ann_1](https://github.com/RessCris2/cv_info/blob/main/imgs/ann_1.png)
 
 
 问题：
