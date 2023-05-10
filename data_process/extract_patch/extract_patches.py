@@ -97,6 +97,7 @@ def extract(dataset_name = 'consep'):
         # )
         img_out_dir = "/root/autodl-tmp/datasets/{}/images/{}".format(dataset_name, split_name)
         label_out_dir = "/root/autodl-tmp/datasets/{}/labels/{}".format(dataset_name, split_name)
+        label_inst_dir = "/root/autodl-tmp/datasets/{}/labels_inst/{}".format(dataset_name, split_name)
         file_list = glob.glob(patterning("%s/*%s" % (ann_dir, ann_ext)))
         file_list.sort()  # ensure same ordering across platform
 
@@ -132,13 +133,17 @@ def extract(dataset_name = 'consep'):
             for idx, patch in enumerate(sub_patches):
                 # 这里的 patch 是不是 [256,256, 5] 呢？如果是的话，就在这里处理掉。
                 # 这里是保存为 npy，转换为保存 png
-                image = patch[:,:,:3]
-                image_filename = "{0}/{1:03d}.jpg".format(img_out_dir, idx)
-                Image.fromarray(image.astype(np.uint8)).save(image_filename, 'JPEG')
-                label = patch[:,:,-1]
-                label_filename = "{0}/{1:03d}.png".format(label_out_dir, idx)
-                Image.fromarray(label.astype(np.uint8)).save(label_filename, 'PNG')
+                # image = patch[:,:,:3]
+                # image_filename = "{0}/{1:03d}.jpg".format(img_out_dir, idx)
+                # Image.fromarray(image.astype(np.uint8)).save(image_filename, 'JPEG')
+                # label = patch[:,:,-1]
+                # label_filename = "{0}/{1:03d}.png".format(label_out_dir, idx)
+                # Image.fromarray(label.astype(np.uint8)).save(label_filename, 'PNG')
                 # np.save("{0}/{1}_{2:03d}.npy".format(label_out_dir, base_name, idx), patch)
+                
+                ## 如果只有type的话，无法转换成coco格式做instance seg
+                ### 取后两维保存，一个是 inst, 一个是 type
+                np.save("{0}/{1:03d}.npy".format(label_inst_dir, idx), patch[:,:,-2:])
                 pbar.update()
             pbar.close()
             # *
@@ -229,7 +234,7 @@ if __name__ == "__main__":
 
     #         pbarx.update()
     #     pbarx.close()
-    extract('cpm17')
+    extract('consep')
 
 
 

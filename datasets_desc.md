@@ -61,7 +61,9 @@ gtFine_trainvaltest.zip和leftImg8bit_trainvaltest.zip (11GB)。
 目前为止有语义分割的最大数据集，提供的类别有80类，有超过33万张图片，其中20万张有标注，整个数据集中个体的数目超过150万个。
 
 **标注格式**: 
-
+object instances format
+(针对别的任务  object keypoints, or image captions, format 分别是怎么样的？)
+```
 最终放进json文件里的字典
 coco_output = {
     "info": INFO,
@@ -81,7 +83,7 @@ annotation_info = {
         "width": binary_mask.shape[1],
         "height": binary_mask.shape[0],
     } 
-
+```
 
 
 # 医学图像
@@ -95,20 +97,28 @@ annotation_info = {
 **url**: 
 **注释**：21623 nuclei, 30 images, 40x, 1000*1000
 **下载链接**：
-**标注格式**: 
+**标注格式**: 没有 class 标签，只是 instance map, Pixel-level nuclei annotation
 
 ## 3. CoNSep Dataset/consep
 **url**: https://warwick.ac.uk/fac/cross_fac/tia/data/hovernet/
+
 **注释**：Nuclei segmentation and classification; 24,319 exhaustively annotated nuclei with associated class labels; 41幅图，40x, 1000*1000
+
+
 **下载链接**：https://warwick.ac.uk/fac/cross_fac/tia/data/hovernet/
+
 **标注格式**: Pixel-level nuclei annotation with associated class labels
+            - 这个数据集目前尬得慌，inst_id 是什么含义啊？
+
+
+
 
 
 ## 4. CPM17
 **url**: https://warwick.ac.uk/fac/cross_fac/tia/data/hovernet/
 **注释**：Nuclei segmentation, 7570 nuclei; 32 幅图，40x and 20x, 500*500 to 600*600
 **下载链接**：https://warwick.ac.uk/fac/cross_fac/tia/data/hovernet/
-**标注格式**: Pixel-level nuclei annotation with associated class labels
+**标注格式**: 没有 class 标签，只是 instance map, Pixel-level nuclei annotation
 
 CoNSeP
 Epithelial
@@ -128,3 +138,25 @@ Epithelial
 Lymphocyte
 Macrophage
 Neutrophil
+
+
+## 5. CRAG Dataset
+MILD-Net: Colorectal Adenocarcinoma Gland (CRAG) Dataset
+**url**: https://warwick.ac.uk/fac/cross_fac/tia/data/mildnet/
+
+**注释**: Gland instance segmentation; 213 images
+
+**标注格式**:Gland instance-level ground truth
+
+## 6.CRCHistoPhenotypes Dataset
+Goal: Nuclei detection and classification
+
+Images: 29,756 nuclei from 100 WSIs
+
+Annotations: 29,756 nuclei centres out of which 22,444 with associated class labels
+
+Download: https://warwick.ac.uk/fac/cross_fac/tia/data/crchistolabelednucleihe/
+
+
+## 7.Lizard Colonic Nuclear Dataset
+Goal: Colonic Nuclear Instance Segmentation and Classification
