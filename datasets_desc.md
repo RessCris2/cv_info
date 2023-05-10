@@ -140,6 +140,9 @@ Macrophage
 Neutrophil
 
 
+epithelial cells, lymphocytes, neutrophils,
+and macrophages
+
 ## 5. CRAG Dataset
 MILD-Net: Colorectal Adenocarcinoma Gland (CRAG) Dataset
 **url**: https://warwick.ac.uk/fac/cross_fac/tia/data/mildnet/
@@ -160,3 +163,47 @@ Download: https://warwick.ac.uk/fac/cross_fac/tia/data/crchistolabelednucleihe/
 
 ## 7.Lizard Colonic Nuclear Dataset
 Goal: Colonic Nuclear Instance Segmentation and Classification
+
+
+## 8.MoNuSeg Dataset
+Goal: Nuelci segmentation
+Images: 29,000 nuclei from 44 images
+Annotations: Pixel-level nuclei annotation
+Download:https://monuseg.grand-challenge.org/Data/
+
+## 9 DigestPath Dataset (MICCAI 2019)
+
+Goal: Signet ring cell detection and colonoscopy tissue segmentation
+
+Images: 77 images (2000px*2000px) from 20 WSIs for signet ring cell detection and 872 images (3000px*3000px) for colonoscopy tissue segmentation
+
+Annotations: (1) bounding boxes for signet ring cells in xml format, (2) Pixel level annotation for colonoscopy tissue segmentation
+
+Download: https://digestpath2019.grand-challenge.org/Home/ (access upon request)
+
+
+## 10. ER+ Breast Cancer Dataset by Andrew Janowczyk
+Goal: (1) ER+ breast cancer nuclei segmentation, (2) Epithelium region segmentation, (3) Lymphocyte detection, (4) Mitosis detection, (5) Invasive ductal carcinoma (IDC) identification, (6) Lymphoma subtype classification
+Images: (1) 12,000 nuclei from 143 images (2000px*2000px) for nuclei segmentation, (2) 42 images (1000px*1000px) for epithelium segmentation, (3) 100 images (100px*100px) for lymphocyte detection, (4) 311 images (2000px*2000px) from 12 patients for mitosis detection, (5) 277,524 images (50px*50px) from 162 WSIs for IDC identification, (6) 374 images (1388px*1040px) for lymphoma subtype classification
+Annotations: (1) Pixel-level nuclei annotation, (2) Pixel-level epithelium annotation, (3) The centers of 3,064 lymphocytes, (4) 550 mitosic centers, (5) binary label for IDC classification, (6) lymphoma subtype labels
+Download (1): http://andrewjanowczyk.com/use-case-1-nuclei-segmentation/
+Download (2): http://andrewjanowczyk.com/use-case-2-epithelium-segmentation/
+Download (3): http://andrewjanowczyk.com/use-case-4-lymphocyte-detection/
+Download (4): http://andrewjanowczyk.com/use-case-5-mitosis-detection/
+Download (5): http://andrewjanowczyk.com/use-case-6-invasive-ductal-carcinoma-idc-segmentation/
+Download (6): http://andrewjanowczyk.com/use-case-7-lymphoma-sub-type-classification/
+
+
+## 11.GlAS Dataset (MICCAI 2015)
+Goal: Gland segmentation
+Images: 165 WSIs at x20 magnification
+Annotations: Glandular boundaries
+Download: https://warwick.ac.uk/fac/cross_fac/tia/data/glascontest/
+
+
+## 12.MoNuSAC 
+https://monusac-2020.grand-challenge.org/Data/
+
+The dataset has over 46,000nuclei from37 hospitals,71patients, four organs, and four nucleus types
+
+![MoNuSAC](https://github.com/RessCris2/cv_info/blob/main/imgs/monusac_dataset_1.png)
