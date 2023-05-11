@@ -11,3 +11,31 @@ pip install git+https://github.com/waspinator/pycococreator.git
 
 - datasets/coco_instance.py
 - 模型config文件：configs/mask_rcnn/mask_rcnn_r50_fpn_1x_coco.py
+
+
+
+
+
+
+
+
+## 如何解读跑数结果？(这里用的是 consep_cascade_mask 的例子)
+做推断的脚本
+
+```python
+from mmdet.apis import init_detector, inference_detector, show_result_pyplot
+import mmcv
+
+config_file = '/root/autodl-tmp/com_models/mmdet_demo/consep_cascade/cascade_mask_rcnn_r50_fpn_1x_coco_consep.py'
+checkpoint_file = '/root/autodl-tmp/com_models/mmdet_demo/consep_cascade/work_dir/latest.pth'
+
+# build the model from a config file and a checkpoint file
+model = init_detector(config_file, checkpoint_file, device='cuda:0')
+# test a single image
+img = '/root/autodl-tmp/datasets/consep/images/test/000.jpg'
+result = inference_detector(model, img)
+# show the results
+show_result_pyplot(model, img, result)
+```
+
+result

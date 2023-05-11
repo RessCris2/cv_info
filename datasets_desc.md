@@ -207,3 +207,5 @@ https://monusac-2020.grand-challenge.org/Data/
 The dataset has over 46,000nuclei from37 hospitals,71patients, four organs, and four nucleus types
 
 ![MoNuSAC](https://github.com/RessCris2/cv_info/blob/main/imgs/monusac_dataset_1.png)
+
+解析xml等代码 https://github.com/ruchikaverma-iitg/MoNuSAC
