@@ -6,8 +6,8 @@
 - 标注格式
 
 ## 1. Cityscapes
-**url**:数据描述和下载页面：https://www.cityscapes-dataset.com/dataset-overview/
-https://mp.weixin.qq.com/s?__biz=MzU2NjU3OTc5NA==&mid=2247560371&idx=1&sn=ab9a44e5d7e2af811c9ca209b12bbd09&chksm=fca9eb8ecbde6298b9072ce066459f00d15a939e92809c5b560048c4f73f1a4dc05041670d57&scene=27
+**url**:数据描述和下载页面：https://www.cityscapes-dataset.com/dataset-overview/        
+https://mp.weixin.qq.com/s? __biz=MzU2NjU3OTc5NA==&mid=2247560371&idx=1&sn=ab9a44e5d7e2af811c9ca209b12bbd09&chksm=fca9eb8ecbde6298b9072ce066459f00d15a939e92809c5b560048c4f73f1a4dc05041670d57&scene=27
 
 **注释**：Cityscapes数据集，聚焦于城市街道场景的语义理解，是图像分割领域一个比较重要的数据集。这个数据有精细注释和粗糙的注释，还有视频。
 可参考解释 https://blog.csdn.net/qq_34424944/article/details/129541001
@@ -209,3 +209,8 @@ The dataset has over 46,000nuclei from37 hospitals,71patients, four organs, and 
 ![MoNuSAC](https://github.com/RessCris2/cv_info/blob/main/imgs/monusac_dataset_1.png)
 
 解析xml等代码 https://github.com/ruchikaverma-iitg/MoNuSAC
+
+
+
+
+![mmseg_datasets](https://github.com/RessCris2/cv_info/blob/main/imgs/mmseg_datasets.png)
