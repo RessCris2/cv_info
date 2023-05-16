@@ -126,12 +126,18 @@ Inflammatory
 Spindle-Shaped
 Miscellaneous
 
-PanNuke
-Neoplastic
-Inflammatory
-Connective
-Dead
-Non-Neoplastic Epithelial
+PanNuke     
+Neoplastic      
+Inflammatory        
+Connective      
+Dead        
+Epithelial      
+
+('Neoplastic'       
+'Inflammatory'      
+'Connective'    
+'Dead'      
+'Epithelial')       
 
 MoNuSAC
 Epithelial

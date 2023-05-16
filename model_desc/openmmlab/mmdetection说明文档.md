@@ -43,6 +43,8 @@ mmengine
 ## 使用 Tips
 ### Tensorboard log
 ```python
+
+# default_runtime.py
 log_config = dict(
     interval=50,
     hooks=[
