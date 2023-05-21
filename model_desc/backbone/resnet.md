@@ -10,3 +10,6 @@
 stage1, stage2, stage3, stage4, stage5
 224，    56，     28，     14，    7
 1,       4,       8,       16,     32
+
+
+resnet 会使用 BN 层.

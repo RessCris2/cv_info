@@ -1,6 +1,9 @@
 如何正确进行参数初始化？
 
 
+# 参考
+[torch笔记二十 | 参数初始化](https://blog.csdn.net/qq_38276972/article/details/117257631)
+
 ```python
 def weights_init(net, init_type='normal', init_gain=0.02):
     def init_func(m):
@@ -26,3 +29,5 @@ def weights_init(net, init_type='normal', init_gain=0.02):
 if not pretrained:
     weights_init(model)
 ```
+
+reset_parameters?

@@ -110,6 +110,8 @@ annotation_info = {
 **标注格式**: Pixel-level nuclei annotation with associated class labels
             - 这个数据集目前尬得慌，inst_id 是什么含义啊？
 
+            
+['background','inflammatory','healthy epithelial','epithelial', 'spindle-shaped']
 
 
 
@@ -150,8 +152,8 @@ epithelial cells, lymphocytes, neutrophils,
 and macrophages
 
 ## 5. CRAG Dataset
-MILD-Net: Colorectal Adenocarcinoma Gland (CRAG) Dataset
-**url**: https://warwick.ac.uk/fac/cross_fac/tia/data/mildnet/
+MILD-Net: Colorectal Adenocarcinoma Gland (CRAG) Dataset        
+**url**: https://warwick.ac.uk/fac/cross_fac/tia/data/mildnet/      
 
 **注释**: Gland instance segmentation; 213 images
 
